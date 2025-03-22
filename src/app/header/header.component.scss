@@ -1,0 +1,43 @@
+.parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background: #ffd200;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
+    .homeicon {
+        a {
+            img {
+                height: 50px;
+                margin-left: 10%;
+            }
+        }
+    }
+}
+
+.div2 {
+    grid-area: 1 / 2 / 2 / 3;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+    .primary{
+        background:transparent;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .primary:hover{
+        background:transparent;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+        border: 1px solid white;
+    }
+}

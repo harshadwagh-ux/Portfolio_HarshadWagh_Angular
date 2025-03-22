@@ -1,0 +1,48 @@
+.container{
+    background-color: #f9f9ff;
+}
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    width: 100%;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 25%;
+}
+
+.div2 {
+    grid-area: 1 / 2 / 2 / 4;
+    padding: 100px;
+    .header {
+        font-family: "Poppins", sans-serif;
+        font-size: 48px;
+        color: #222222;
+        font-weight: 700;
+        width: 75%;
+    }
+
+
+}
+
+.circie{
+    border-radius: 20px;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+}
+
+.hrline{
+    color: red;
+    background: red;
+    border: 1px;
+    height: 2px;
+}
+p{
+    font-family: "Poppins", sans-serif;
+    opacity: 65%;
+}
