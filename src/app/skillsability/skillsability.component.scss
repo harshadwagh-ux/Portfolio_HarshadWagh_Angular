@@ -1,0 +1,87 @@
+@viewport {
+    width: device-width;
+    initial-scale: 1.0;
+}
+
+.container {
+    background-color: #f9f9ff;
+    margin-top: 80px;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    grid-template-rows: repeat(4, 1fr);  
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    background-color: rgb(50 2 110);
+    border-radius: 10px;
+    margin: 0;
+}
+.mainimg{
+    height: 56px;
+    margin-bottom: -10px;
+}
+.parentwrp {
+    padding: 75px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.titletag{
+    text-align: center;
+    font-size: 35px;
+    padding: 20px;
+    margin-top: -75px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+}
+
+.text {
+    text-align: center;
+    background-color: rgb(5 0 31);
+    font-size: 20px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    padding: 10px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.textimg {
+    text-align: center;
+    background-color: rgb(5 0 31);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.textimg img {
+    height: 50px;
+    padding: 10px;
+    margin-bottom: -10px;
+}
+
+[class^="div"] {
+    padding: 25px;
+}
+
+@media (max-width: 1200px) {
+    .parent {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .parent {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .parent {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .parent {
+        grid-template-columns: 1fr;  
+    }
+}
