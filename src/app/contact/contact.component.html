@@ -1,0 +1,72 @@
+<section class="container">    
+    <div class="parent">
+        <div class="div1">
+            <div class="deatilswrpmain">
+                <div class="deatilswrp">
+                    <img src="../../assets/home.svg">
+                    <div class="subdeatilswrp">
+                        <span class="maindata">Maharashtra, India - 422105</span><br>
+                        <span class="subdata">NTPS Colony, Eklahare, Nashik</span>
+                    </div>
+                </div>
+                <div class="deatilswrp">
+                    <img src="../../assets/phone.svg">
+                    <div class="subdeatilswrp">
+                        <span class="maindata">+91 - 7057094091</span><br>
+                        <span class="subdata">Mon to Fri 9 AM to 6 PM</span>
+                    </div>
+                </div>
+                <div class="deatilswrp">
+                    <img src="../../assets/mail.svg">
+                    <div class="subdeatilswrp">
+                        <span class="maindata">harshadwagh535&#64;gmail.com</span><br>
+                        <span class="subdata">Send me your query anytime!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="div3">
+            <form [formGroup]="Contactform" (ngSubmit)="onSubmit()">
+                <div class="subdiv1">
+                    <div class="component">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Enter Your Full Name " id="FullName" formControlName="FullName">
+                        <div class="errortext" *ngIf="Contactform.controls.FullName.invalid && Contactform.controls.FullName.touched ">
+                            <small *ngIf="Contactform.controls.FullName.hasError('required')">Full Name is required.</small>
+                            <small *ngIf="Contactform.controls.FullName.hasError('minlength')">Full Name must be at least 3 characters long.</small>
+                        </div>
+                    </div>
+                    <div class="component">
+                        <label>Email</label>
+                        <input type="text" placeholder="Enter Email Address " id="Email" formControlName="Email">
+                        <div class="errortext" *ngIf="Contactform.controls.Email.invalid && Contactform.controls.Email.touched">
+                            <small *ngIf="Contactform.controls.Email.hasError('required')">Email is required.</small>
+                            <small *ngIf="Contactform.controls.Email.hasError('email')">Please enter a valid email.</small>
+                        </div>
+                    </div>
+                    <div class="component">
+                        <label>Mobile Number</label>
+                        <input type="text" id="MobileNumber" formControlName="MobileNumber" placeholder="Enter your mobile number">
+                        <div class="errortext" *ngIf="Contactform.controls.MobileNumber.invalid && Contactform.controls.MobileNumber.touched">
+                            <small *ngIf="Contactform.controls.MobileNumber.hasError('required')">Mobile Number is required.</small>
+                            <small *ngIf="Contactform.controls.MobileNumber.hasError('pattern')">Mobile Number must be 10 digits long.</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="subdiv2">
+                    <div class="component">
+                        <label>Enter Message</label>
+                        <textarea type="text" placeholder="Enter Message " id="Message" formControlName="Message" maxlength="1500"></textarea>
+                        <div class="errortext" *ngIf="Contactform.controls.Message.invalid && Contactform.controls.Message.touched ">
+                            <small *ngIf="Contactform.controls.Message.hasError('required')">Message is required.</small>
+                            <small *ngIf="Contactform.controls.Message.hasError('minlength')">Message must be at least 3 characters long.</small>
+                        </div>
+                    </div>
+                    <div class="primarywrp">
+                        <button mat-button [disabled]="Contactform.invalid" class="primary"><img class="wpimg" src="../../assets/whatsapp.svg"><span>Send Message</span></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

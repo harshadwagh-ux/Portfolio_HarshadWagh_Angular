@@ -1,0 +1,126 @@
+body{
+    background-color: #f9f9ff;
+    height: auto;
+}
+.container {
+    width: 1140px;
+    margin: auto;
+    margin-top: 6%;
+}
+
+.sectionerptext{
+    max-width: 1140px;
+}
+h3{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: #212529;
+    text-align: left;
+    font-size: 24px;
+}
+p{
+    font-family: "Poppins", sans-serif;
+    text-align: left;
+    color: #777777;
+    line-height: 26px;
+    margin-bottom: 0px;
+    display: block;
+}
+.primary{
+    display: inline-block;
+    outline: none;
+    line-height: 40px;
+    padding: 0 30px;
+    font-size: 0.8em;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.btnwrp{
+    display: flex;justify-content: space-evenly; padding: 15px; 
+}
+
+table{
+    border: 1px solid #ddd;
+}
+th, td{
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+tr:nth-child(even){
+    background-color: #f6f6fa;
+}
+th{
+    background: cornflowerblue !important;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+input[type="text"] {
+    font-family: "Poppins", sans-serif;
+    width: 50%;
+    padding: 6px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px; 
+}
+
+.image-container img {
+    height: 250px;
+    object-fit: cover;
+    width: 100%; 
+}
+.typography h1, .typography h2, .typography h3, .typography h4, .typography h5, .typography h6 {
+color: #777777;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px; 
+        font-family: "Poppins", sans-serif;
+}
+
+ul ul {
+    list-style-type: circle;
+    margin-left: 20px;
+        font-family: "Poppins", sans-serif;
+}
+
+ul ul ul {
+    list-style-type: square; 
+    margin-left: 20px;
+        font-family: "Poppins", sans-serif;
+}
+
+input[type="text"], textarea, select {
+    font-family: "Poppins", sans-serif;
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: left;
+    margin-right: 25px;
+}
+
+textarea {
+    resize: none;
+    height: 116px;
+    width: 95%;
+}
