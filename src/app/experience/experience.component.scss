@@ -4,10 +4,9 @@
   
   body {
     background-color: #f9f9ff;
-    padding: 75px;
     font-family: "Poppins", sans-serif;
-    height: 500px;
     margin-top: 80px;
+    height: auto;
   }
   
   .timeline {
@@ -104,6 +103,7 @@
     width: 100%;
     padding-left: 70px;
     padding-right: 25px;
+    height: auto;
     }
 
     .container::before {
@@ -128,6 +128,7 @@
     padding: 10px;
     font-weight: 600;
     color: rgb(1 41 112);
+    line-height: 30px;
 }
 
 .text2 {

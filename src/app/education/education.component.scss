@@ -1,9 +1,85 @@
+/* Basic container styling */
 .container {
     background-color: #f9f9ff;
-    padding: 75px;
-    margin-top: 80px;
+    // padding: 75px;
+    margin-top: 160px;
+    margin-bottom: 40px;
 }
 
+/* Title styling */
+.titletag {
+    text-align: center;
+    font-size: 35px;
+    // padding: 20px;
+    margin-top: -75px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+}
+
+/* Parent flex container */
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default to 3 columns on larger screens */
+    grid-gap: 10px;
+
+    width: 96%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+/* Child div styling */
+.div1, .div2, .div3 {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Ensure content stacks vertically */
+    // padding: 15px;
+    justify-content: space-between;
+    text-align: center; /* Center align text */
+}
+
+/* Image wrapper styling */
+.div1wrp, .div2wrp, .div3wrp {
+    width: 100%;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Text styling */
+.text1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 26px;
+    // padding: 10px;
+    font-weight: 600;
+    color: rgb(1 41 112);
+}
+
+.text2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    margin-top: 15px;
+    color: rgb(34 34 240);
+}
+
+.text3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    margin-top: 15px;
+    font-weight: 600;
+    height: 100%;
+    color: rgb(60 126 30);
+    margin-bottom: 15px;
+}
+
+.text4 {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    margin-top: 15px;
+    opacity: 65%;
+
+}
+
+/* Image Styling */
 .mainimg {
     height: 56px;
     margin-bottom: -10px;
@@ -13,165 +89,52 @@
     height: 150px;
     border-radius: 10px;
     box-shadow: 5px 5px 5px 5px #ddd;
+    margin-top: 25px;
 }
 
-.parent {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 6px;
-}
+/* Media Queries for Responsiveness */
 
-.titletag {
-    text-align: center;
-    font-size: 35px;
-    padding: 20px;
-    margin-top: -75px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-}
-
-.div1, .div2, .div3 {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    display: flex;
-    width: 100%;
-    padding: 10px;
-}
-
-.div1 {
-    grid-area: 1 / 1 / 2 / 2;
-}
-
-.div2 {
-    grid-area: 2 / 1 / 3 / 2;
-}
-
-.div3 {
-    grid-area: 3 / 1 / 4 / 2;
-}
-
-.div1wrp, .div2wrp, .div3wrp {
-    width: 40%;
-    text-align: center;
-}
-
-.text1 {
-    font-family: "Poppins", sans-serif;
-    font-size: 26px;
-    padding: 10px;
-    font-weight: 600;
-    color: rgb(1 41 112);
-}
-
-.text2 {
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
-    padding: 10px;
-    color: rgb(34 34 240);
-}
-
-.text3 {
-    font-family: "Poppins", sans-serif;
-    font-size: 20px;
-    padding: 10px;
-    font-weight: 600;
-    height: 100%;
-    color: rgb(60 126 30);
-}
-
-.text4 {
-    font-family: "Poppins", sans-serif;
-    font-size: 15px;
-    padding: 10px;
-    opacity: 65%;
-}
-
+/* On smaller screens, stack divs vertically */
 @media (max-width: 768px) {
     .parent {
-        grid-template-columns: 1fr; 
-        grid-template-rows: auto;
-        padding: 20px;
-    }
-
-    .titletag {
-        font-size: 28px;
-        margin-top: 0;
+        grid-template-columns: 1fr; /* Stack all divs vertically */
     }
 
     .div1, .div2, .div3 {
-        flex-direction: column; 
-        padding: 15px;
-        margin-bottom: 20px;
+        width: 100%; /* Ensure full width for each div */
     }
 
-    .div1wrp, .div2wrp, .div3wrp {
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    .Subimg {
-        height: 120px; 
+    .titletag {
+        font-size: 30px; /* Reduce title font size on small screens */
     }
 
     .text1 {
-        font-size: 22px;
+        font-size: 22px; /* Reduce text size */
     }
 
-    .text2 {
-        font-size: 14px;
-    }
-
-    .text3 {
-        font-size: 18px;
-    }
-
-    .text4 {
-        font-size: 13px;
+    .text2, .text3, .text4 {
+        font-size: 14px; /* Adjust font sizes for smaller devices */
     }
 }
 
+/* Further adjustments for very small devices */
 @media (max-width: 480px) {
     .parent {
-        grid-template-columns: 1fr; 
-        grid-template-rows: auto;
-        padding: 10px;
+        grid-template-columns: 1fr; /* Stack all divs vertically */
     }
-
     .titletag {
-        font-size: 24px; 
-        margin-top: 0;
-    }
-
-    .div1, .div2, .div3 {
-        flex-direction: column; 
-        padding: 10px;
-        margin-bottom: 15px;
-    }
-
-    .div1wrp, .div2wrp, .div3wrp {
-        width: 90%; 
-        margin: 0 auto;
-    }
-
-    .Subimg {
-        height: 100px;
+        font-size: 24px; /* Even smaller font size for mobile */
     }
 
     .text1 {
-        font-size: 20px;
+        font-size: 18px; /* Adjust text size */
     }
 
-    .text2 {
-        font-size: 12px;
+    .text2, .text3, .text4 {
+        font-size: 12px; /* Adjust text size */
     }
 
-    .text3 {
-        font-size: 16px;
-    }
-
-    .text4 {
-        font-size: 12px;
+    .Subimg {
+        height: 120px; /* Reduce image size for mobile */
     }
 }

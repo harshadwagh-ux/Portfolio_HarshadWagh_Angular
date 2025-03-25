@@ -10,24 +10,27 @@
 
 .parent {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); 
-    grid-template-rows: repeat(4, 1fr);  
+    grid-template-columns: repeat(6, 1fr); /* Default grid with 6 columns */
+    grid-template-rows: repeat(4, 1fr);  /* Define 4 rows for the initial grid */
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     background-color: rgb(50 2 110);
     border-radius: 10px;
     margin: 0;
 }
-.mainimg{
+
+.mainimg {
     height: 56px;
     margin-bottom: -10px;
 }
+
 .parentwrp {
     padding: 75px;
     max-width: 100%;
     box-sizing: border-box;
 }
-.titletag{
+
+.titletag {
     text-align: center;
     font-size: 35px;
     padding: 20px;
@@ -39,7 +42,7 @@
 .text {
     text-align: center;
     background-color: rgb(5 0 31);
-    font-size: 20px;
+    font-size: 14px;
     color: white;
     font-family: "Poppins", sans-serif;
     padding: 10px;
@@ -62,26 +65,38 @@
     padding: 25px;
 }
 
+/* Media Queries for Responsive Layout */
+
+/* Medium screens (1200px and below) */
 @media (max-width: 1200px) {
     .parent {
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(5, 1fr); /* Change to 5 columns for medium screens */
     }
 }
 
+/* Tablets (992px and below) */
 @media (max-width: 992px) {
     .parent {
-        grid-template-columns: repeat(4, 1fr); 
+        grid-template-columns: repeat(4, 1fr); /* Change to 4 columns for smaller screens */
     }
 }
 
+/* Mobile Landscape (768px and below) */
 @media (max-width: 768px) {
     .parent {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr); /* Change to 3 columns for mobile landscape */
     }
 }
 
+/* Mobile Portrait (480px and below) */
 @media (max-width: 480px) {
     .parent {
-        grid-template-columns: 1fr;  
+        grid-template-columns: 1fr; /* Stack all items in one column */
+    }
+}
+
+@media (max-width: 650px) {
+    .parent {
+        grid-template-columns: repeat(1, 1fr); /* Change to 2 columns for medium-small screens */
     }
 }

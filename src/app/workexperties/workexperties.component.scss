@@ -1,33 +1,41 @@
-body{
+body {
     background-color: #f9f9ff;
     height: auto;
+    margin: 0;
+    padding: 0;
 }
+
 .container {
-    width: 1140px;
+    width: 100%;
     margin: auto;
     margin-top: 80px;
-
+    // padding: 15px;
 }
 
-.sectionerptext{
-    max-width: 1140px;
+.sectionerptext {
+    max-width: 100%;
+    margin: 0 auto;
 }
-h3{
+
+h3 {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     color: #212529;
     text-align: left;
-    font-size: 24px;
+    font-size: 2rem; /* Changed to rem for scalability */
+    margin-bottom: 10px;
 }
-p{
+
+p {
     font-family: "Poppins", sans-serif;
     text-align: left;
     color: #777777;
-    line-height: 26px;
-    margin-bottom: 0px;
+    line-height: 1.6;
+    margin-bottom: 0;
     display: block;
 }
-.primary{
+
+.primary {
     display: inline-block;
     outline: none;
     line-height: 40px;
@@ -37,27 +45,33 @@ p{
     text-decoration: none;
     font-weight: 500;
     cursor: pointer;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
+    transition: all 0.3s ease;
 }
 
-.btnwrp{
-    display: flex;justify-content: space-evenly; padding: 15px; 
+.btnwrp {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px;
+    flex-wrap: wrap; /* Added flex-wrap for responsiveness */
+    gap: 10px;
 }
 
-table{
+table {
     border: 1px solid #ddd;
+    width: 100%;
 }
-th, td{
+
+th, td {
     text-align: center;
     font-family: "Poppins", sans-serif;
+    padding: 10px;
 }
-tr:nth-child(even){
+
+tr:nth-child(even) {
     background-color: #f6f6fa;
 }
-th{
+
+th {
     background: cornflowerblue !important;
     color: white;
     font-size: 16px;
@@ -66,62 +80,139 @@ th{
 
 input[type="text"] {
     font-family: "Poppins", sans-serif;
-    width: 50%;
+    width: 100%; /* Full width on smaller screens */
+    max-width: 400px; /* Max width for larger screens */
     padding: 6px 20px;
     margin: 8px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     text-align: center;
+    margin-left: 12px;
 }
 
 .image-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 10px; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 
 .image-container img {
     height: 250px;
     object-fit: cover;
-    width: 100%; 
+    width: 100%;
 }
+
 .typography h1, .typography h2, .typography h3, .typography h4, .typography h5, .typography h6 {
-color: #777777;
+    color: #777777;
 }
 
 ul {
     list-style-type: disc;
-    margin-left: 20px; 
-        font-family: "Poppins", sans-serif;
+    margin-left: 20px;
+    font-family: "Poppins", sans-serif;
 }
 
 ul ul {
     list-style-type: circle;
     margin-left: 20px;
-        font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 ul ul ul {
-    list-style-type: square; 
+    list-style-type: square;
     margin-left: 20px;
-        font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 input[type="text"], textarea, select {
     font-family: "Poppins", sans-serif;
-    width: 30%;
+    width: 100%; /* Full width on smaller screens */
+    max-width: 400px; /* Max width for larger screens */
     padding: 12px 20px;
     margin: 8px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     text-align: left;
-    margin-right: 25px;
+    
+    margin-left: 10px;
 }
 
 textarea {
     resize: none;
     height: 116px;
-    width: 95%;
+    width: 100%; /* Full width on smaller screens */
+    max-width: 95%; /* Max width for larger screens */
+}
+
+.leftmmm{
+    padding: 10px;
+}
+.rightmmm{
+    padding: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    h3 {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    .btnwrp {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        align-items: center; /* Center-align buttons */
+    }
+
+    .primary {
+        width: 50%; /* Make buttons full width on small screens */
+        margin: 5px 0;
+    }
+
+    .image-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+
+    .sectionerptext {
+        padding: 15px; /* Adjust padding */
+    }
+    .leftmmm{
+        height: 78px;
+        padding: 10px;
+    }
+    .rightmmm{
+        height: 78px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h3 {
+        font-size: 1.2rem; /* Further reduce font size for very small screens */
+    }
+
+    .btnwrp {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+
+    .image-container {
+        grid-template-columns: 1fr; /* Single column for images */
+    }
+
+    .container {
+        margin-top: 80px; /* Reduce top margin on very small screens */
+    }
+
+    .primary {
+        font-size: 1rem; /* Increase button font size for touch interactions */
+    }
+    .leftmmm{
+        height: 78px;
+        padding: 10px;
+    }
+
+    .rightmmm{
+        height: 78px;
+        padding: 10px;
+    }
 }

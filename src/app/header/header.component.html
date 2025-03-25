@@ -1,30 +1,28 @@
-<div class="parent">
-    <div class="div1">
-        <div class="homeicon">
-            <a href="/Home">
-                <img src="../../assets/Home_icon.png" alt="Logo" title="Home" />
-            </a>
+<nav class="navbar">
+    <div class="homeicon">
+        <a>
+            <img src="../../assets/Home_icon.png" alt="Logo" title="Home" />
+        </a>
+    </div>
+    <div class="menu" *ngIf="!isMobile && !isTablet">
+        <button mat-button class="primary" title="Home" (click)="navigate('Home')">Home</button>
+        <button mat-button class="primary" title="About" (click)="navigate('About')">About</button>
+        <button mat-button class="primary" title="Skill's & Abilities" (click)="navigate('Skills')">Skills</button>
+        <button mat-button class="primary" title="Education" (click)="navigate('Education')">Education</button>
+        <button mat-button class="primary" title="Work Experience" (click)="navigate('Experience')">Experience</button>
+        <button mat-button class="primary" title="Working Expertise" (click)="navigate('Page')">Expertise</button>
+        <button mat-button class="primary" title="Contact Details" (click)="navigate('Contact')">Contact</button>
+    </div>
+    <div class="dropdown-menu" *ngIf="isMobile || isTablet">
+        <button mat-button class="primary primarymore" (click)="toggleDropdown()">☰</button>
+        <div class="dropdown-content" *ngIf="isDropdownOpen">
+            <button mat-button class="primary" title="Home" (click)="navigate('Home')">Home</button>
+            <button mat-button class="primary" title="About" (click)="navigate('About')">About</button>
+            <button mat-button class="primary" title="Skill's & Abilities" (click)="navigate('Skills')">Skills</button>
+            <button mat-button class="primary" title="Education" (click)="navigate('Education')">Education</button>
+            <button mat-button class="primary" title="Work Experience" (click)="navigate('Experience')">Experience</button>
+            <button mat-button class="primary" title="Working Expertise" (click)="navigate('Page')">Expertise</button>
+            <button mat-button class="primary" title="Contact Details" (click)="navigate('Contact')">Contact</button>
         </div>
     </div>
-    <div class="div2">
-        <button mat-button class="primary" title="Home" (click)="nevigate('Home')">Home</button>
-    </div>
-    <div class="div3">
-        <button mat-button class="primary" title="About" (click)="nevigate('About')">About</button>
-    </div>
-    <div class="div4">
-        <button mat-button class="primary" title="Skill's & Ablilities" (click)="nevigate('Skills')">Skill's</button>
-    </div>
-    <div class="div5">
-        <button mat-button class="primary" title="Education" (click)="nevigate('Education')">Education</button>
-    </div>
-    <div class="div6">
-        <button mat-button class="primary" title="Work Experience" (click)="nevigate('Experience')">Experience</button>
-    </div>
-    <div class="div7">
-        <button mat-button class="primary" title="Working Expertise" (click)="nevigate('Page')">Expertis</button>
-    </div>
-    <div class="div8">
-        <button mat-button class="primary" title="Contact Details" (click)="nevigate('Contact')">Contact</button>
-    </div>
-</div>
+</nav>

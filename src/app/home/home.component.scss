@@ -16,15 +16,19 @@
     0% {
         opacity: 1;
     }
+
     33% {
         opacity: 0;
     }
+
     50% {
         opacity: 1;
     }
+
     66% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -32,15 +36,12 @@
 
 .parent {
     position: relative;
-}
-
-
-.parent {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-column-gap: 20px; 
+    grid-row-gap: 20px;
+    padding: 20px;
 }
 
 .div1 {
@@ -117,86 +118,46 @@
     font-weight: 700;
 }
 
-@media (max-width: 1200px) {
-    .parent {
-        grid-template-columns: 1fr; 
-    }
-
-    .div1 {
-        padding: 50px;
-    }
-
-    .profilepic {
-        height: 250px;
-        width: 250px;
-    }
-
-    .primary {
-        width: 70%;
-    }
-
-    .text1 {
-        font-size: 40px;
-    }
-
-    .text2 {
-        font-size: 30px;
-    }
-
-    .text3 {
-        font-size: 20px;
-    }
-}
-
 @media (max-width: 768px) {
     .parent {
+        display: grid;
         grid-template-columns: 1fr; 
-        padding: 10px; 
-        width: 100%;
+        grid-template-rows: auto;
+        padding: 10px;
     }
 
-    .div1 {
+    .div1, .div2 {
+        grid-area: auto;
+        margin-bottom: 20px;
         padding: 20px;
     }
 
-    .div2 {
-        order: 2; 
-    }
-
     .profilepic {
-        height: 200px;
-        width: 200px;
+        width: 250px; 
+        height: 250px;
     }
 
     .primary {
-        width: 80%;
-        font-size: 14px;
+        width: 180px;
+        text-align: center;
     }
 
     .text1 {
-        font-size: 35px;
+        font-size: 32px; /* Adjust text size */
     }
 
     .text2 {
-        font-size: 25px;
+        font-size: 24px; /* Adjust text size */
     }
 
     .text3 {
-        font-size: 18px;
+        font-size: 20px; /* Adjust text size */
     }
 }
 
 @media (max-width: 480px) {
-    .div1 {
-        padding: 10px;
-    }
-
-    .primary {
-        width: 90%;
-    }
-
     .text1 {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .text2 {
@@ -204,11 +165,16 @@
     }
 
     .text3 {
-        font-size: 16px;
+        font-size: 18px; 
     }
 
     .profilepic {
-        height: 180px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .primary {
         width: 180px;
+        padding: 15px;
     }
 }
