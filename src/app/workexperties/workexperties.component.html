@@ -112,7 +112,7 @@
                     </ng-container>
                     <ng-container matColumnDef="name">
                       <th mat-header-cell *matHeaderCellDef> Name<br>
-                        <input type="text" placeholder="-- Search Name--" (input)="search1($event)">
+                        <input type="text" placeholder="-- Search --" (input)="search1($event)" style="width: 50%; text-align: center;">
                          </th>
                       <td mat-cell *matCellDef="let element"> {{element.name}} </td>
                     </ng-container>
@@ -234,7 +234,9 @@
                             <option value="America">America</option>
                         </select>
                         <textarea placeholder="Message" id="message" name="message" rows="5" required></textarea>
-                        <!-- <button mat-button class="primary" style="color:#fff;background: #4cd3e3;border: 1px solid transparent;">Success</button> -->
+                        <br>
+                        <button mat-button class="primary" style="margin-left: 10px;color:#fff;background: #4cd3e3;border: 1px solid transparent;">Success</button>
+
                     </form>
                 </div>
                 </div>

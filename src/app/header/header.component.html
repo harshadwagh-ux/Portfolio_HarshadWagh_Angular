@@ -6,11 +6,11 @@
     </div>
     <div class="menu" *ngIf="!isMobile && !isTablet">
         <button mat-button class="primary" title="Home" (click)="navigate('Home')">Home</button>
-        <button mat-button class="primary" title="About" (click)="navigate('About')">About</button>
         <button mat-button class="primary" title="Skill's & Abilities" (click)="navigate('Skills')">Skills</button>
         <button mat-button class="primary" title="Education" (click)="navigate('Education')">Education</button>
         <button mat-button class="primary" title="Work Experience" (click)="navigate('Experience')">Experience</button>
-        <button mat-button class="primary" title="Working Expertise" (click)="navigate('Page')">Expertise</button>
+        <button mat-button class="primary" title="Working Expertise" (click)="navigate('Page')">Element</button>
+        <button mat-button class="primary" title="About" (click)="navigate('About')">About</button>
         <button mat-button class="primary" title="Contact Details" (click)="navigate('Contact')">Contact</button>
     </div>
     <div class="dropdown-menu" *ngIf="isMobile || isTablet">

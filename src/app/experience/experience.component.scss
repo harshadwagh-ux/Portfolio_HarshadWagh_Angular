@@ -7,12 +7,16 @@
     font-family: "Poppins", sans-serif;
     margin-top: 80px;
     height: auto;
+    width: 100%;
   }
   
   .timeline {
     position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    // margin-left: -1000px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
   
   .timeline::after {
@@ -22,7 +26,7 @@
     background-color: #ff9f55;
     top: 0;
     bottom: 0;
-    left: 50%;
+    left: 20%;
     margin-left: -3px;
   }
   
@@ -53,7 +57,7 @@
   }
   
   .right {
-    left: 50%;
+    left: 20%;
   }
   
   .left::before {
@@ -67,6 +71,9 @@
     border: medium solid white;
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent white;
+  }
+  .img{
+    width: 100%;
   }
   
   .right::before {

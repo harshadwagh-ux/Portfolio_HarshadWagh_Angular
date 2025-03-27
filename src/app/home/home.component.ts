@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   constructor(){
-    let texts = [ "Web development |", "Frontend development |","Angular development |"];
+    let texts = [ "Web development", "Frontend development","Angular development"];
     let currentIndex = 0;   
     function changeText() {
         const dynamicTextElement = document.getElementById('dynamic-text');

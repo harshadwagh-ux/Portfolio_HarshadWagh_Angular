@@ -97,6 +97,27 @@
 
 @media (max-width: 650px) {
     .parent {
-        grid-template-columns: repeat(1, 1fr); /* Change to 2 columns for medium-small screens */
+        // grid-template-columns: repeat(1, 1fr); /* Change to 2 columns for medium-small screens */
+        grid-template-columns: repeat(3, 1fr); 
+        .div1, .div2, .div3
+        ,.div4, .div5, .div6,
+        .div7, .div8, .div9,
+        .div10, .div11, .div12,
+        .div13, .div14, .div15,
+        .div16, .div17, .div18,
+        .div19, .div20, .div21,
+        .div22, .div23, .div24{
+            width: 100px;
+            padding: 10px;
+            margin: auto;
+        }
+    }
+    .parentwrp{
+        padding: 2px;
+        margin-top: 150px;
+
+    }
+    .titletag{
+        background-color: #f9f9ff;
     }
 }

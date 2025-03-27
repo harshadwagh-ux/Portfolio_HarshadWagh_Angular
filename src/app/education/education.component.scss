@@ -21,7 +21,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Default to 3 columns on larger screens */
     grid-gap: 10px;
-
+    grid-template-columns: 1fr;
     width: 96%;
     margin: auto;
     margin-top: 20px;
